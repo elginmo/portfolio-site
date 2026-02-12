@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+    
+    <main class="gallery-container">
+
+        
+        <div class="left-menu">
+
+            <a href="music-visualizer-page.html" class="project-icon"
+                data-video="videos/Chroma.mp4"
+                data-title="St. Chroma Visualizer"
+                data-desc="A Generative Music Visualizer using p5js inspired by Tyler, The Creator's CHROMAKOPIA">
+                <img src="images/usb-icon.png" alt="Music Visualizer Project">
+            </a>
+
+            <a href="animation-page.html" class="project-icon"
+                data-video="videos/animation-project.mp4"
+                data-title="Street Race Animation"
+                data-desc="A Stop Motion Short made using Lego Cars.">
+                <img src="images/usb-icon.png" alt="Stop Motion Project">
+            </a>
+
+            <a href="solar-surge-page.html" class="project-icon"
+                data-video="videos/solar-surge.mp4"
+                data-title="Solar Surge"
+                data-desc="DMD 2500 Final Project, Made by Elgin Moreno Galicia and Sebastian Ching">
+                <img src="images/usb-icon.png" alt="Solar Surge Game">
+            </a>
+
+        </div>
+
+       
+        <div class="preview-screen">
+
+           
+            <div class="project-preview">
+               
+                <video class="preview-video" autoplay muted loop playsinline></video>
+
+                
+                <div class="video-tint"></div>
+
+                
+                <div class="project-info">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+
+            
+            <div class="default-screen">
+                <img src="images/error-image.jpeg" alt="Browser Error">
+                <p>Select a project</p>
+            </div>
+
+        </div>
+
+        
+    <div class="menu-bar">
+    <span class="gallery-name">E. Moreno Galicia</span>
+    <div class="button-group">
+        <a href="about-me.html" class="menu-button">About Me</a>
+        <a href="project-gallery.html" class="menu-button">Projects</a>
+        <a href="photo-gallery.html" class="menu-button">Photos</a>
+        <a href="home.html" class="menu-button">Home</a>
+        <a href="javascript:history.back()" class="menu-button">Back</a>
+    </div>
+</div>
+
+    </main>
+
+    <script src="js/gallery.js"></script>
+
+</body>
+</html>

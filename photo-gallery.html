@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<main class="gallery-container">
+
+   
+    <div class="left-menu">
+       <a href="carnaval-photos.html" class="project-icon" data-title="Carnaval de Tlaxcala" 
+   data-images='["images/carnaval-01.jpeg","images/carnaval-02.jpeg","images/carnaval-03.jpeg"]'>
+    <img src="images/icon-folder.png" alt="Photo Slides 1">
+     <a href="greenhouse-photos.html" class="project-icon" data-title="UConn Greenhouse" 
+   data-images='["images/greenhouse-01.jpg","images/greenhouse-02.jpg","images/greenhouse-03.jpg"]'>
+    <img src="images/icon-folder.png" alt="Photo 1">
+       
+        \
+</a>
+    </div>
+
+
+    <div class="preview-screen">
+        <div class="project-preview">
+
+            <video class="preview-video" src="videos/vhs-screen.mp4" autoplay muted loop playsinline></video>
+
+            <div class="video-tint"></div>
+
+            <div class="project-info">
+                <h2>Photo Gallery</h2>
+                <p>Hover over thumbnails to see details</p>
+            </div>
+
+            <div class="default-screen">
+                <img src="images/error-image.jpeg" alt="Browser Error">
+                <p>Select a project</p>
+            </div>
+        </div>
+    </div>
+ <div class="menu-bar">
+    <span class="gallery-name">E. Moreno Galicia</span>
+    <div class="button-group">
+        <a href="about-me.html" class="menu-button">About Me</a>
+        <a href="project-gallery.html" class="menu-button">Projects</a>
+        <a href="photo-gallery.html" class="menu-button">Photos</a>
+        <a href="home.html" class="menu-button">Home</a>
+        <a href="javascript:history.back()" class="menu-button">Back</a>
+    </div>
+</div>
+    
+
+</main>
+
+<script src="js/photo-gallery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E. Moreno Galicia</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <!-- Fullscreen Video background -->
+    <video class="home-background" autoplay muted loop playsinline>
+        <source src="videos/portfolio-background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Header with name top-left -->
+    <header>E. Moreno Galicia</header>
+
+    <!-- Main menu bottom-left with welcome text -->
+    <nav class="main-menu">
+        <div class="welcome-text">Welcome</div>
+        <a href="about-me.html">About Me</a>
+        <a href="project-gallery.html">Project Gallery</a>
+        <a href="photo-gallery.html"> Photography Gallery</a>
+    </nav>
+
+    <!-- JS for continuously toggling welcome text -->
+    <script>
+        const welcomeText = document.querySelector('.welcome-text');
+        const messages = ['Welcome', 'Bienvenidos'];
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % messages.length;
+            welcomeText.textContent = messages[index];
+        }, 2000); // switch every 2 seconds
+    </script>
+
+</body>
+</html>

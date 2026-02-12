@@ -1,0 +1,35 @@
+/* Global CSS elements*/
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+:root {
+  --font-modern: 'Iceland', sans-serif;
+
+  /* Global colors*/
+  --text-light: #f5f5f5;
+  --text-dark: #111;
+  --bg-dark: #000;
+  --accent: #b8a47e; /* muted analog gold */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-modern);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* Iceland class */
+.iceland-regular {
+  font-family: 'Iceland', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

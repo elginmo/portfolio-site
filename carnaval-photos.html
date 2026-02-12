@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="css/photos.css"/>
+  <link rel="stylesheet" href="css/global.css">
+  
+</head>
+<body>
+
+  <div class="header">
+    <h1 class="shoot-title">Carnaval de Tlaxcala</h1>
+    <p class="shoot-description"> This Gallery shows off one of the many traditions from within Tlaxcala, Mexico being celebrated in New Haven, CT. 
+        The festival is best known for its colorful cuadrillas (dance troupes), elaborate masks, and the iconic huehues—masked 
+        dancers whose performances mix satire, social commentary, and ancestral ritual. Through dance, costume, and community 
+        celebration, the Carnaval represents cultural resistance, identity, and historical memory, honoring Tlaxcalas Indigenous 
+        heritage while celebrating joy, creativity, and communal pride. </p>
+  </div>
+
+  <div class="gallery-container fade-in">
+    <div class="gallery-item"><img src="images/carnaval-01.jpeg" alt="Photo 1"></div>
+    <div class="gallery-item"><img src="images/carnaval-02.jpeg" alt="Photo 2"></div>
+    <div class="gallery-item"><img src="images/carnaval-03.jpeg" alt="Photo 3"></div>
+    <div class="gallery-item"><img src="images/carnaval-04.jpeg" alt="Photo 4"></div>
+    <div class="gallery-item"><img src="images/carnaval-05.jpeg" alt="Photo 5"></div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img id="lightboxImage" src="" alt="Expanded">
+  </div>
+
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // Fade-in animation trigger
+    window.addEventListener('load', () => {
+      document.querySelector('.gallery-container').classList.add('loaded');
+    });
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImage.src = item.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+
+ <div class="menu-bar">
+    <span class="gallery-name">E. Moreno Galicia</span>
+    <div class="button-group">
+        <a href="about-me.html" class="menu-button">About Me</a>
+        <a href="project-gallery.html" class="menu-button">Projects</a>
+        <a href="photo-gallery.html" class="menu-button">Photos</a>
+        <a href="home.html" class="menu-button">Home</a>
+        <a href="javascript:history.back()" class="menu-button">Back</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* ---- Page Spacing ---- */
+body {
+    margin: 0;
+    padding: 0 0 80px; /* prevent menu bar overlap */
+    background: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* ---- Header ---- */
+.header {
+    max-width: 900px;
+    margin: 60px auto 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.shoot-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.shoot-description {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ---- Gallery Layout ---- */
+.gallery-container {
+    max-width: 1100px;
+    margin: 0 auto 100px auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.gallery-container.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Gallery Items ---- */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(255,255,255,0.15);
+}
+
+/* If there's an odd number of photos, center the last one */
+.gallery-item:nth-child(5) {
+    grid-column: span 2;
+    justify-self: center;
+    width: 70%;
+}
+
+/* ---- Lightbox ---- */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ---- Menu Bar (your existing code) ---- */
+.menu-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(30,30,30,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* site name left, buttons right */
+    padding: 0 20px;
+    border-top: 2px solid #444;
+    color: #fff;
+    font-family: var(--font-modern);
+    z-index: 10;
+}
+
+.gallery-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* space between buttons */
+}
+
+.return-home {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 12px;
+    background: rgba(50,50,50,0.8); /* original semi-transparent dark background */
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.return-home:hover {
+    background: rgba(100,100,100,0.8); /* subtle hover effect */
+}
+
+.menu-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 14px;
+    background: rgba(50,50,50,0.8);
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
